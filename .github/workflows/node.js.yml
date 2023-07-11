@@ -40,4 +40,4 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: your-image-repo:latest
+          tags: 261032345623.dkr.ecr.us-east-1.amazonaws.com/nextjsapp:latest
