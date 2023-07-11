@@ -43,12 +43,12 @@ jobs:
           tags: 261032345623.dkr.ecr.us-east-1.amazonaws.com/nextjsapp:latest
           
       - name: Configure kubectl
-      run: |
-        mkdir -p ~/.kube
-        echo ${{ secrets.KUBECONFIG }} | base64 --decode > ~/.kube/config
-       kubectl get pod -A
-        
-    - name: Deploy to EKS
-      run: |
-        pwd
-        kubectl apply -f deployment.yaml
+        run: |
+          mkdir -p ~/.kube
+          echo ${{ secrets.KUBECONFIG }} | base64 --decode > ~/.kube/config
+          kubectl get pod -A
+
+      - name: Deploy to EKS
+        run: |
+          pwd
+          kubectl apply -f deployment.yaml
