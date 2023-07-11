@@ -26,6 +26,7 @@ jobs:
           echo ${{ secrets.KUBECONFIG }} | base64 --decode > ~/.kube/config
           sudo apt-get update && sudo apt-get install -y kubectl
           kubectl get pod -A
+          pwd
 
       - name: Deploy to EKS
         run: |
