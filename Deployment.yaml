@@ -17,7 +17,7 @@ spec:
     spec: 
       containers: 
         - name: nextjs
-          image: 261032345623.dkr.ecr.us-east-1.amazonaws.com/nextjsapp:latest
+          image: 974403022047.dkr.ecr.us-east-1.amazonaws.com/nextjsapp
           imagePullPolicy: IfNotPresent
 
 --- 
