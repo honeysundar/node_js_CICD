@@ -39,7 +39,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ env.ecr_registry }}
+          tags: 974403022047.dkr.ecr.us-east-1.amazonaws.com/nextjsapp
           
       - name: Configure kubectl
         run: |
