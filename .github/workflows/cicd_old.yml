@@ -39,7 +39,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: ${{ ecr_registry }}
+          tags: ${{ env.ecr_registry }}
           
       - name: Configure kubectl
         run: |
