@@ -41,7 +41,7 @@ jobs:
           push: true
           tags: 974403022047.dkr.ecr.us-east-1.amazonaws.com/nextjsapp
           
-     - name: Set up kubectl
+      - name: Set up kubectl
         run: |
           curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
           chmod +x kubectl
