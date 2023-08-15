@@ -41,15 +41,16 @@ jobs:
           push: true
           tags: 974403022047.dkr.ecr.us-east-1.amazonaws.com/nextjsapp
           
-      - name: Configure kubectl
+     - name: Set up kubectl
         run: |
-          mkdir -p ~/.kube
-          echo ${{ secrets.KUBECONFIG }} | base64 --decode > ~/.kube/config
-          sudo apt-get update && sudo apt-get install -y kubectl
-          kubectl get pod -A
-          pwd
+          curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+          chmod +x kubectl
+          sudo mv kubectl /usr/local/bin/
 
-      - name: Deploy to EKS
+      - name: Configure kubectl for Amazon EKS
         run: |
-          pwd
+          aws eks update-kubeconfig --name CloudDemo --region us-east-1  # Replace with your cluster's name and region
+
+      - name: Deploy to Amazon EKS
+        run: |
           kubectl apply -f deployment.yaml
