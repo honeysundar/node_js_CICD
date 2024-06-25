@@ -23,7 +23,7 @@ jobs:
       - name: Update Kubernetes manifests
         run: |
           sed -i 's/<TAG>/${{ github.sha }}/g' K8S/deployment.yaml
-          kubectl apply -f K8S/
+          #kubectl apply -f K8S/
 
       - name: Commit and push changes
         run: |
