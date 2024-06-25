@@ -27,8 +27,8 @@ jobs:
 
       - name: Commit and push changes
         run: |
-          git config --global user.name 'honeysundar'
-          git config --global user.email 'honeysundar@gmail.com'
+          git config --global user.name 'github-actions'
+          git config --global user.email 'github-actions@github.com'
           git add K8S/deployment.yaml
           git commit -m "Update Kubernetes manifests with new image tag"
           git push origin main
