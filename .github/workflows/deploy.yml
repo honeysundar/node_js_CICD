@@ -40,7 +40,7 @@ jobs:
         run: |
           git config --global user.name 'honeysundar'
           git config --global user.email 'honeysundar@gmail.com'
-          git add k8s/deployment.yaml
+          git add K8S/deployment.yaml
           git commit -m "Update Kubernetes manifests with new image tag"
           git push origin main
         env:
