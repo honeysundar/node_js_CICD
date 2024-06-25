@@ -33,4 +33,4 @@ jobs:
           git commit -m "Update Kubernetes manifests with new image tag"
           git push origin main
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.FluxCD_GITHUB_TOKEN }}
