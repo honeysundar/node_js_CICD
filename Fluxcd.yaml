@@ -25,5 +25,5 @@ spec:
     kind: GitRepository
     name: node-js-cicd
   targetNamespace: default
-  timeout: 3m0s
+  timeout: 1m0s
   wait: true
