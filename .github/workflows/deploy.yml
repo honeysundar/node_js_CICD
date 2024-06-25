@@ -29,8 +29,8 @@ jobs:
         env:
           PAT: ${{ secrets.PAT }}
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "honeysundar"
+          git config --global user.email "honeysundar@gmail.com"
           git remote set-url origin https://x-access-token:${{ secrets.PAT }}@github.com/${{ github.repository }}
           git add .
           git commit -m "Automated build"
