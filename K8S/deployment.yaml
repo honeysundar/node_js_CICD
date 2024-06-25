@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: nextjs-app
-          image: honeysundar/nodejs:v1
+          image: honeysundar/nodejs:latest
           ports:
             - containerPort: 3000
